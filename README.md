@@ -54,6 +54,7 @@ for i, lag in enumerate(lags):
 ~~~
 
 # display the graph
+~~~
 plt.figure(figsize=(10, 5))
 plt.stem(lags, autocorr)
 plt.title('Autocorrelation')
@@ -61,9 +62,10 @@ plt.xlabel('Lag')
 plt.ylabel('Autocorrelation')
 plt.grid(True)
 plt.show()
-
+~~~
 ### OUTPUT:
 <img width="875" alt="image" src="https://github.com/user-attachments/assets/91618dd5-ae23-4720-b07f-adbc982b1727">
 
 ### RESULT:
-        Thus the python code is successfully implemented the auto correlation function in python.
+
+Thus the python code is successfully implemented the auto correlation function in python.
