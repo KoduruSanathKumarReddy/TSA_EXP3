@@ -25,19 +25,45 @@ data = [3, 16, 156, 47, 246, 176, 233, 140, 130,
 lags = range(35)
 
 
-#Pre-allocate autocorrelation table
+# Pre-allocate autocorrelation table
+~~~
+autocorr = np.zeros(len(lags))
+~~~
 
-#Mean
+# Mean
+~~~
+mean = np.mean(data)
+~~~
 
-#Variance
+# Variance
+~~~
+variance = np.var(data)
+~~~
 
-#Normalized data
-
+# Normalized data
+~~~
+normalized_data = (data - mean) / np.sqrt(variance)
+~~~
 #Go through lag components one-by-one
+~~~
+for i, lag in enumerate(lags):
+    if lag == 0:
+        autocorr[i] = 1.0
+    else:
+        autocorr[i] = np.sum(normalized_data[:-lag] * normalized_data[lag:]) / len(data)
+~~~
 
-#display the graph
+# display the graph
+plt.figure(figsize=(10, 5))
+plt.stem(lags, autocorr)
+plt.title('Autocorrelation')
+plt.xlabel('Lag')
+plt.ylabel('Autocorrelation')
+plt.grid(True)
+plt.show()
 
 ### OUTPUT:
+<img width="875" alt="image" src="https://github.com/user-attachments/assets/91618dd5-ae23-4720-b07f-adbc982b1727">
 
 ### RESULT:
-        Thus we have successfully implemented the auto correlation function in python.
+        Thus the python code is successfully implemented the auto correlation function in python.
