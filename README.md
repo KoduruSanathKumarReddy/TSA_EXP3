@@ -1,8 +1,8 @@
-Name: Koduru Sanath Kumar Reddy
+### Name: Koduru Sanath Kumar Reddy
 
-Register no: 212221240024
+### Register no: 212221240024
 
-Date:
+### Date:
 # Ex.No: 03   COMPUTE THE AUTO FUNCTION(ACF)
 
 
